@@ -1,0 +1,9 @@
+github.com/goml/gobrain v0.0.0-20190708142826-a9d9724c9e47 h1:cMBwfuoSxorEwgRo83PXI2sDsJG513LEwywags7AcT0=
+github.com/goml/gobrain v0.0.0-20190708142826-a9d9724c9e47/go.mod h1:3C9khhaMIcUpCkbwcG7fVaqIjUOOnRxRUvZ+btWi+5A=
+github.com/muesli/smartcrop v0.3.0 h1:JTlSkmxWg/oQ1TcLDoypuirdE8Y/jzNirQeLkxpA6Oc=
+github.com/muesli/smartcrop v0.3.0/go.mod h1:i2fCI/UorTfgEpPPLWiFBv4pye+YAG78RwcQLUkocpI=
+github.com/nfnt/resize v0.0.0-20180221191011-83c6a9932646 h1:zYyBkD/k9seD2A7fsi6Oo2LfFZAehjjQMERAvZLEDnQ=
+github.com/nfnt/resize v0.0.0-20180221191011-83c6a9932646/go.mod h1:jpp1/29i3P1S/RLdc7JQKbRpFeM1dOBd8T9ki5s+AY8=
+golang.org/x/image v0.0.0-20200119044424-58c23975cae1 h1:5h3ngYt7+vXCDZCup/HkCQgW5XwmSvR/nA2JmJ0RErg=
+golang.org/x/image v0.0.0-20200119044424-58c23975cae1/go.mod h1:FeLwcggjj3mMvU+oOTbSwawSJRM1uh48EjtB4UJZlP0=
+golang.org/x/text v0.3.0/go.mod h1:NqM8EUOU14njkJ3fqMW+pc6Ldnwhi/IjpwHt7yyuwOQ=
