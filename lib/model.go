@@ -12,7 +12,7 @@ import (
 
 // private method
 func bin(n int) []float64 {
-	f := [8]float64{}
+	f := [8]float64{} // MAX model 8개
 	for i := uint(0); i < 8; i++ {
 		f[i] = float64((n >> i) & 1) // shift로 이진수 형태로 저장
 	}
@@ -68,8 +68,9 @@ func MakeModel(labels []string) (*gobrain.FeedForward, error) {
 		
 		//  모든 이미지가 패턴에 {{이미지 값}{라벨 값}}의 형태로 저장됨	
 		for _, b := range bset {
-			patterns = append(patterns, [][]float64{b, bin(i)}) // 3차원 패턴 슬라이드에 2차원 이미지 슬라이드를 추가 , bin으로 라벨의 이진수 형태의 키 값 지정(3차원 슬라이스로 전부 지정됨)
+			patterns = append(patterns, [][]float64{b, bin(i)}) // 3차원 패턴 슬라이드에 2차원 이미지 슬라이드를 추가 , 저장할 모델의 위치값를 binary형태로 지정(3차원 슬라이스로 전부 지정됨)
 		}
+		// fmt.Println(bin(i)) // [0 0 0 0 0 0 0 0], [1 0 0 0 0 0 0 0], [0 1 0 0 0 0 0 0]... 이런식으로 각 이미지의 위치가 지정됨. 결과에선 각 위치에따른 일치 퍼센트가 나옴
 	}
 	
 	if len(patterns) == 0 || len(patterns[0][0]) == 0 {
@@ -78,7 +79,7 @@ func MakeModel(labels []string) (*gobrain.FeedForward, error) {
 	
 	fmt.Println("training now... please wait...")
 	ff.Init(len(patterns[0][0]), 40, len(patterns[0][1])) // input(입력) = 이미지 값, hidden(기억) = 기억노드 수 지정, output(출력) = 라벨값
-	ff.Train(patterns, 1000, 0.6, 0.4, false) // 학습
+	ff.Train(patterns, 1000, 0.6, 0.4, false) // 학습(패턴, 학습횟수, 상수, 상수, 에러값 출력 플래그)
 	return ff, nil
 }
 

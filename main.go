@@ -10,6 +10,7 @@ import (
 
 func check(d []float64) int {
 	n := 0
+	fmt.Println(d)
 	for i, v := range d {
 		if v > 0.9 { // 이미지의 일치값이 90%이상일 경우 맞다고 판단
 			n += 1 << uint(i)
